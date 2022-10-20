@@ -1,0 +1,73 @@
+@import '../vars';
+
+.CategoryCard {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(2, auto) 1fr auto;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 300px;
+  padding: 15px 15px 20px;
+  border-radius: 5px;
+  box-shadow: 7px 7px 0px 0px rgba(38, 38, 38, 0.2);
+  background-color: $white;
+  transition: height ease-in-out 300ms;
+
+  &.show-more {
+    height: 450px;
+    grid-template-rows: repeat(2, auto) auto 1fr auto;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  h3 {
+    width: 100%;
+    text-align: start;
+    border-bottom: 1px solid $black;
+    padding: 6px 0 4px;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding: 8px 0;
+  }
+
+  button {
+    justify-self: center;
+    font-size: 1rem;
+    border: none;
+    background-color: $light-orange;
+    border-radius: 25px;
+    padding: 6px 12px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 2px 2px 5px rgba(38, 38, 38, 0.5);
+    animation: 800ms ease-in-out;
+  }
+
+  .show-more-description {
+    opacity: 1;
+    animation: 500ms ease-in-out 0ms showMore;
+
+    ol {
+      list-style-position: inside;
+    }
+  }
+}
+
+@keyframes showMore {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

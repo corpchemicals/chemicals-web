@@ -1,0 +1,78 @@
+@import './vars';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $principal-font;
+}
+
+body {
+  position: relative;
+  background-color: $white;
+}
+
+#root {
+  @media(min-width: $large) {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+  }
+}
+
+p {
+  font-weight: 400;
+  max-width: 70ch;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: $black;
+  font-family: $title-font;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}
+
+.orange-word { 
+  color: $light-orange; 
+  text-shadow: 2px 2px 1px $black;
+  letter-spacing: 2px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.coming-soon {
+  color: rgba($color: $black, $alpha: 0.3);
+  position: relative;
+  cursor: default;
+
+  &::after {
+    content: '¡Pronto!';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-20deg);
+    font-size: inherit;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba($color: $black, $alpha: 0.8);
+  }
+}

@@ -1,0 +1,20 @@
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+// background-color: rgba(var(--white-rgb), $alpha: 0.9);
+$light-orange: #fca027;
+$dark-orange: #f24b18;
+$light-blue: #35599c;
+$dark-blue: hsl(271, 100%, 30%);
+$very-dark-blue:  #2C3639;
+
+$white: hsl(42, 33%, 96%);
+$cream:  hsl(300, 17%, 90%);
+$black: hsl(0, 0%, 15%);
+
+$title-font: 'Montserrat', serif;
+$principal-font: 'Inter', sans-serif;
+
+// Media sizes
+$large: 67.5em;

@@ -1,0 +1,74 @@
+@import '../vars';
+
+.OrderInput {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  background-color: $cream;
+  color: $black;
+  border-radius: 5px;
+  padding: 12px 20px;
+  outline: 1px solid $black;
+  border-radius: 20px;
+  box-shadow: 3px 3px 0px rgba($color: $black, $alpha: 0.8);
+  transition: 
+    transform ease-in-out 150ms, 
+    box-shadow ease-in-out 150ms, 
+    border linear 80ms;
+
+  &:focus-within {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+
+    label {
+      font-weight: 500;
+    }
+  }
+  
+  label {
+    font-weight: 400;
+    margin-bottom: 2px;
+
+    sup {
+      margin-left: 2px;
+      font-size: 0.75rem;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $black;
+    outline: none;
+    font-size: 1.1rem;
+    min-height: 1.8rem;
+    color: inherit;
+
+    &::placeholder {
+      color: rgba($color: $black, $alpha: 0.6);
+    }
+
+    &:focus {
+      border-bottom: 2px solid $black;
+    }
+  }
+
+  .two-input-wrapper {
+    display: grid;
+    grid-template-columns: auto 8px 1fr;
+
+    input {
+      width: 100%;
+      
+      &:first-of-type {
+        text-align: center;
+        max-width: 6ch;
+      }
+  
+      &:last-of-type {
+        grid-column: 3 / 4;
+      }
+    }
+  }
+}
